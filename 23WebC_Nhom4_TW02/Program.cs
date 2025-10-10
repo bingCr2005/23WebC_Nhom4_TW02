@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+﻿using static _23WebC_Nhom4_TW02.PostDAO;
+using _23WebC_Nhom4_TW02.Models;
+>>>>>>> f0b0fad (Lưu thay đổi tạm thời trước khi chuyển nhánh)
 namespace _23WebC_Nhom4_TW02
 {
     public class Program
@@ -6,9 +11,62 @@ namespace _23WebC_Nhom4_TW02
         {
             var builder = WebApplication.CreateBuilder(args);
 
+<<<<<<< HEAD
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+=======
+            builder.Services.AddControllersWithViews();
+
+            builder.Services.AddScoped<IDataProvider, DataProvider>();
+
+     
+
+            // DI người dùng
+            builder.Services.AddScoped<IUserDao, UserDao>();
+
+            // DI danh mục sản phẩm
+            builder.Services.AddScoped<ICategoryDao, CategoryDao>();
+
+            // DI tag sản phẩm
+            builder.Services.AddScoped<ITagDao, TagDao>();
+
+            // DI sản phẩm
+            builder.Services.AddScoped<IProductDao, ProductDao>();
+
+            // DI liên kết sản phẩm - tag
+            builder.Services.AddScoped<IProductTagDao, ProductTagDao>();
+
+            // DI hình ảnh sản phẩm
+            builder.Services.AddScoped<IProductImageDao, ProductImageDao>();
+
+            // DI đánh giá sản phẩm
+            builder.Services.AddScoped<IReviewDao, ReviewDao>();
+
+            // DI giỏ hàng
+            builder.Services.AddScoped<ICartDao, CartDao>();
+
+            // DI chi tiết giỏ hàng
+            builder.Services.AddScoped<ICartItemDao, CartItemDao>();
+
+            // DI danh sách yêu thích
+            builder.Services.AddScoped<IWishlistDao, WishlistDao>();
+
+            // DI đơn hàng
+            builder.Services.AddScoped<IOrderDao, OrderDao>();
+
+            // DI chi tiết đơn hàng
+            builder.Services.AddScoped<IOrderItemDao, OrderItemDao>();
+
+            // DI bài viết
+            builder.Services.AddScoped<IPostDao, PostDao>();
+
+            // DI mã giảm giá
+            builder.Services.AddSingleton<ICouponDao, CouponDao>();
+
+            // DI website
+            builder.Services.AddSingleton<IWebSettingDao, WebSettingDao>();
+>>>>>>> f0b0fad (Lưu thay đổi tạm thời trước khi chuyển nhánh)
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

@@ -2,14 +2,13 @@
 
 namespace _23WebC_Nhom4_TW02.Controllers
 {
-    public class CartController : Controller
+    public class OrderController : Controller
     {
+        private readonly IOrderDao _orderDao;
 
-        private readonly ICartDao _cartDao;
-
-        public CartController(ICartDao cartDao)
+        public OrderController(IOrderDao orderDao)
         {
-            _cartDao = cartDao;
+            _orderDao = orderDao;
         }
         public IActionResult Index()
         {
