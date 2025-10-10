@@ -7,4 +7,8 @@
     <RootNamespace>_23WebC_Nhom4_TW02</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Models\" />
+  </ItemGroup>
+
 </Project>
