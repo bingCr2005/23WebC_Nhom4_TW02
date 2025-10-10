@@ -30,6 +30,10 @@ namespace _23WebC_Nhom4_TW02
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
+            app.MapControllerRoute(
+                name: "Areas",
+                pattern: "{Area:exists}/{controller=Home}/{action=Index}/{id?}");
+
             app.Run();
         }
     }
