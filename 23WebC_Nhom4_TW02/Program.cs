@@ -16,7 +16,6 @@ namespace _23WebC_Nhom4_TW02
             builder.Services.AddControllersWithViews();
 
 =======
-            builder.Services.AddControllersWithViews();
 
             builder.Services.AddScoped<IDataProvider, DataProvider>();
 
@@ -91,6 +90,18 @@ namespace _23WebC_Nhom4_TW02
             app.MapControllerRoute(
                 name: "Areas",
                 pattern: "{Area:exists}/{controller=Home}/{action=Index}/{id?}");
+=======
+            builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("UstoraDB")));
+
+            app.UseDataLoader();
+
+            var jsonData = Middleware.DataLoader.JsonData;
+            if (jsonData != null)
+            {
+                builder.Services.AddSingleton(jsonData);
+            }
+
+>>>>>>> f0b0fad (Lưu thay đổi tạm thời trước khi chuyển nhánh)
 
             app.Run();
         }

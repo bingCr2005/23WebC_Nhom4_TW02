@@ -1,0 +1,42 @@
+{
+    "Categories": [
+        {
+            "Id": 1,
+            "Name": "Điện thoại",
+            "Slug": "dien-thoai"
+        },
+        {
+            "Id": 2,
+            "Name": "Máy tính bảng",
+            "Slug": "may-tinh-bang"
+        },
+        {
+            "Id": 3,
+            "Name": "Phụ kiện",
+            "Slug": "phu-kien"
+        }
+    ],
+    "Products": [
+        {
+            "Id": 1,
+            "Name": "iPhone 15 Pro Max",
+            "CategoryId": 1,
+            "Price": 32990000,
+            "Stock": 20
+        },
+        {
+            "Id": 2,
+            "Name": "Samsung Galaxy S24 Ultra",
+            "CategoryId": 1,
+            "Price": 29990000,
+            "Stock": 15
+        },
+        {
+            "Id": 3,
+            "Name": "iPad Pro M2 12.9 inch",
+            "CategoryId": 2,
+            "Price": 34990000,
+            "Stock": 10
+        }
+    ]
+}
