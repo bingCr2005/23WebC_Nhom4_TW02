@@ -62,10 +62,10 @@ namespace _23WebC_Nhom4_TW02
             builder.Services.AddScoped<IPostDao, PostDao>();
 
             // DI mã giảm giá
-            builder.Services.AddSingleton<ICouponDao, CouponDao>();
+            builder.Services.AddScoped<ICouponDao, CouponDao>();
 
             // DI website
-            builder.Services.AddSingleton<IWebSettingDao, WebSettingDao>();
+            builder.Services.AddScoped<IWebSettingDao, WebSettingDao>();
 >>>>>>> f0b0fad (Lưu thay đổi tạm thời trước khi chuyển nhánh)
             var app = builder.Build();
 
