@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 ﻿using static _23WebC_Nhom4_TW02.PostDAO;
 using _23WebC_Nhom4_TW02.Models;
->>>>>>> f0b0fad (Lưu thay đổi tạm thời trước khi chuyển nhánh)
 namespace _23WebC_Nhom4_TW02
 {
     public class Program
@@ -11,11 +8,9 @@ namespace _23WebC_Nhom4_TW02
         {
             var builder = WebApplication.CreateBuilder(args);
 
-<<<<<<< HEAD
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-=======
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddScoped<IDataProvider, DataProvider>();
@@ -66,7 +61,6 @@ namespace _23WebC_Nhom4_TW02
 
             // DI website
             builder.Services.AddScoped<IWebSettingDao, WebSettingDao>();
->>>>>>> f0b0fad (Lưu thay đổi tạm thời trước khi chuyển nhánh)
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
