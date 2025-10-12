@@ -1,7 +1,8 @@
-
 using _23WebC_Nhom4_TW02.Models;
 using Microsoft.Extensions.DependencyInjection;
 ﻿using static _23WebC_Nhom4_TW02.PostDAO;
+﻿using static _23WebC_Nhom4_TW02.PostDAO;
+using _23WebC_Nhom4_TW02.Models;
 
 namespace _23WebC_Nhom4_TW02
 {
@@ -70,14 +71,19 @@ namespace _23WebC_Nhom4_TW02
             builder.Services.AddScoped<IPostDao, PostDao>();
 
             //sửa ngày 11/10 DI singleton->scoped
-            builder.Services.AddScoped<ICouponDao, CouponDao>();
-            builder.Services.AddScoped<IWebSettingDao, WebSettingDao>();
+            //builder.Services.AddScoped<ICouponDao, CouponDao>();
+            //builder.Services.AddScoped<IWebSettingDao, WebSettingDao>();
             // DI mã giảm giá
+
             //builder.Services.AddSingleton<ICouponDao, CouponDao>();
 
             // DI website
             //builder.Services.AddSingleton<IWebSettingDao, WebSettingDao>();
 
+            builder.Services.AddScoped<ICouponDao, CouponDao>();
+
+            // DI website
+            builder.Services.AddScoped<IWebSettingDao, WebSettingDao>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
