@@ -1,8 +1,8 @@
-<<<<<<< HEAD
-=======
-﻿using static _23WebC_Nhom4_TW02.PostDAO;
+
 using _23WebC_Nhom4_TW02.Models;
->>>>>>> f0b0fad (Lưu thay đổi tạm thời trước khi chuyển nhánh)
+using Microsoft.Extensions.DependencyInjection;
+﻿using static _23WebC_Nhom4_TW02.PostDAO;
+
 namespace _23WebC_Nhom4_TW02
 {
     public class Program
@@ -11,16 +11,24 @@ namespace _23WebC_Nhom4_TW02
         {
             var builder = WebApplication.CreateBuilder(args);
 
-<<<<<<< HEAD
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-=======
             builder.Services.AddControllersWithViews();
 
-            builder.Services.AddScoped<IDataProvider, DataProvider>();
+            // builder.Services.AddSingleton<IDataProvider, DataProvider>();
 
-     
+            builder.Services.AddDistributedMemoryCache(); // lưu session tạm trong bộ nhớ
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30); // thời gian sống của session
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
+            // dùng DI cho ProductDao và DataProvider
+            builder.Services.AddScoped<IDataProvider, DataProvider>();  
+            builder.Services.AddScoped<IProductDao, ProductDao>(); 
 
             // DI người dùng
             builder.Services.AddScoped<IUserDao, UserDao>();
@@ -61,12 +69,15 @@ namespace _23WebC_Nhom4_TW02
             // DI bài viết
             builder.Services.AddScoped<IPostDao, PostDao>();
 
+            //sửa ngày 11/10 DI singleton->scoped
+            builder.Services.AddScoped<ICouponDao, CouponDao>();
+            builder.Services.AddScoped<IWebSettingDao, WebSettingDao>();
             // DI mã giảm giá
-            builder.Services.AddSingleton<ICouponDao, CouponDao>();
+            //builder.Services.AddSingleton<ICouponDao, CouponDao>();
 
             // DI website
-            builder.Services.AddSingleton<IWebSettingDao, WebSettingDao>();
->>>>>>> f0b0fad (Lưu thay đổi tạm thời trước khi chuyển nhánh)
+            //builder.Services.AddSingleton<IWebSettingDao, WebSettingDao>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -81,6 +92,8 @@ namespace _23WebC_Nhom4_TW02
             app.UseStaticFiles();
 
             app.UseRouting();
+            //bật session
+            app.UseSession();
 
             app.UseAuthorization();
 

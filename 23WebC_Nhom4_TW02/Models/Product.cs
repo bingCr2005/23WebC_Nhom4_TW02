@@ -1,4 +1,6 @@
-﻿namespace _23WebC_Nhom4_TW02
+﻿
+using Microsoft.Data.SqlClient;
+namespace _23WebC_Nhom4_TW02
 {
     public class Product
     {
@@ -40,5 +42,13 @@
 
         // Ngày cập nhật
         public DateTime? UpdatedAt { get; set; }
+
+
+        public string CategoryName { get; set; }
+
+        //đánh dấu sản phẩm mới
+        public bool IsNew { get; set; } = false;
+
+        public int SalesCount { get; set; } = 0;
     }
 }
