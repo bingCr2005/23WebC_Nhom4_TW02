@@ -1,0 +1,21 @@
+@"
+# Visual Studio
+.vs/
+# Build results
+bin/
+obj/
+# User-specific
+*.user
+*.suo
+*.userosscache
+# Database, logs, pyl
+*.dbmdl
+*.log
+*.pdb
+# VS Code
+.vscode/
+# Node modules (nếu có)
+node_modules/
+# Env files
+.env
+"@ > .gitignore
