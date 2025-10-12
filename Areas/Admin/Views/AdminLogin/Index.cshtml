@@ -1,0 +1,227 @@
+﻿@model _23WebC_Nhom4_TW02.Models.UserLogin
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Login</title>
+    <style>
+        :root {
+            --bg1: #0f172a;
+            --bg2: #0b1220;
+            --card: #0f172a44;
+            --accent: #6ee7b7;
+            --accent-2: #60a5fa;
+            --glass: rgba(255,255,255,0.06);
+            --muted: #9ca3af;
+            --danger: #fb7185;
+            --radius: 12px;
+            --shadow: 0 10px 30px rgba(2,6,23,0.6);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html, body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(135deg,var(--bg1) 0%, #071029 50%, var(--bg2) 100%);
+            color: #e6eef8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 980px;
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .hero {
+            padding: 32px;
+            border-radius: var(--radius);
+            background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(6px) saturate(120%);
+        }
+
+            .hero h1 {
+                margin: 0 0 8px;
+                font-size: 28px;
+                letter-spacing: -0.4px;
+            }
+
+            .hero p {
+                margin: 0;
+                color: var(--muted);
+                line-height: 1.5;
+            }
+
+        .card {
+            background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255,255,255,0.04);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        input[type="text"], input[type="password"] {
+            padding: 12px 14px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.06);
+            background: rgba(255,255,255,0.02);
+            color: var(--accent-2);
+            outline: none;
+            font-size: 15px;
+            transition: box-shadow .15s, border-color .15s;
+        }
+
+        input:focus {
+            box-shadow: 0 6px 18px rgba(96,165,250,0.08);
+            border-color: rgba(96,165,250,0.7);
+        }
+
+        .input-row {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .show-pass {
+            position: absolute;
+            right: 10px;
+            background: none;
+            border: none;
+            color: var(--muted);
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 8px;
+        }
+
+        .actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            background: linear-gradient(90deg,var(--accent) 0%, var(--accent-2) 100%);
+            color: #04202a;
+            box-shadow: 0 8px 20px rgba(96,165,250,0.12);
+        }
+
+            .btn.secondary {
+                background: transparent;
+                color: var(--muted);
+                border: 1px solid rgba(255,255,255,0.04);
+            }
+
+        .error {
+            color: var(--danger);
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <div class="brand">
+                <div class="logo">AD</div>
+                <div>
+                    <h1>Admin Dashboard</h1>
+                    <p>Đăng nhập để quản trị nội dung — bảo đảm an toàn và quản lý quyền truy cập.</p>
+                </div>
+            </div>
+        </section>
+
+        <aside class="card" aria-labelledby="loginTitle">
+            <h2 id="loginTitle" style="margin:0 0 8px;color:#e8f6ff">Đăng nhập Admin</h2>
+            <p class="note">Nhập username và password của bạn để truy cập khu vực quản trị.</p>
+
+            <!--  Form đăng nhâp admin -->
+            <form asp-area="Admin" asp-controller="AdminLogin" asp-action="Index" method="post">
+                <div class="field">
+                    <label asp-for="Username"></label>
+                    <div class="input-row">
+                        <input asp-for="Username" placeholder="Nhập username" autocomplete="username" />
+                        <span asp-validation-for="Username" class="error"></span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label asp-for="Password"></label>
+                    <div class="input-row">
+                        <input asp-for="Password" placeholder="Nhập mật khẩu" type="password" autocomplete="current-password" />
+                        <button type="button" class="show-pass">👁️</button>
+                        <span asp-validation-for="Password" class="error"></span>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" class="btn">Đăng nhập</button>
+                </div>
+
+                @if (ViewBag.Error != null)
+                {
+                    <p class="error">@ViewBag.Error</p>
+                }
+            </form>
+        </aside>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const btn = document.querySelector('.show-pass');
+            if (btn) {
+                btn.addEventListener('click', function () {
+                    const pass = document.querySelector('input[type="password"]');
+                    if (pass.type === 'password') {
+                        pass.type = 'text';
+                        this.textContent = '🙈';
+                    } else {
+                        pass.type = 'password';
+                        this.textContent = '👁️';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+﻿@model _23WebC_Nhom4_TW02.Product
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Thêm sản phẩm";
+}
+
+
+<h2 class="mb-4">Thêm sản phẩm mới</h2>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label class="form-label">Danh mục (CategoryID)</label>
+        <input asp-for="CategoryID" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Tên sản phẩm</label>
+        <input asp-for="ProductName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Slug</label>
+        <input asp-for="Slug" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Mô tả ngắn</label>
+        <textarea asp-for="ShortDescription" class="form-control"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Mô tả chi tiết</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label class="form-label">Giá gốc</label>
+            <input asp-for="Price" class="form-control" />
+        </div>
+        <div class="col-md-6 mb-3">
+            <label class="form-label">Giá khuyến mãi</label>
+            <input asp-for="PriceSale" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label class="form-label">Tồn kho</label>
+            <input asp-for="Stock" class="form-control" />
+        </div>
+        <div class="col-md-6 mb-3">
+            <label class="form-label">Trạng thái</label>
+            <select asp-for="Status" class="form-select">
+                <option value="Active">Active</option>
+                <option value="Hidden">Hidden</option>
+                <option value="OutOfStock">OutOfStock</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Ảnh đại diện (URL)</label>
+        <input asp-for="ThumbnailUrl" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Lưu sản phẩm</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>
