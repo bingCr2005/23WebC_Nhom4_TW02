@@ -23,6 +23,7 @@ namespace _23WebC_Nhom4_TW02
             // DI danh mục sản phẩm
             builder.Services.AddScoped<ICategoryDao, CategoryDao>();
 
+
             // DI tag sản phẩm
             builder.Services.AddScoped<ITagDao, TagDao>();
 

@@ -1,7 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using _23WebC_Nhom4_TW02.Models;
 
-namespace _23WebC_Nhom4_TW02.Controllers
+
+namespace _23WebC_Nhom4_TW02.Areas.Admin.Controllers
 {
+    [Area("Admin")]
+    [Route("admin/category")]
     public class CategoryController : Controller
     {
         private readonly ICategoryDao _categoryDao;
@@ -10,9 +14,17 @@ namespace _23WebC_Nhom4_TW02.Controllers
         {
             _categoryDao = categoryDao;
         }
-        public IActionResult Index()
+
+        [HttpPost("add")]
+        public IActionResult AddCategoryAjax([FromBody] Category category)
         {
-            return View();
+            if (string.IsNullOrWhiteSpace(category.CategoryName))
+                return BadRequest("Tên danh mục không được để trống.");
+
+            bool success = _categoryDao.AddCategory(category);
+            if (success)
+                return Ok(new { message = "Thêm thành công", category });
+            return StatusCode(500, "Lỗi khi thêm danh mục.");
         }
     }
 }

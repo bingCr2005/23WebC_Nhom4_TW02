@@ -180,7 +180,7 @@
                 <div class="field">
                     <label asp-for="Username"></label>
                     <div class="input-row">
-                        <input asp-for="Username" placeholder="Nhập username" autocomplete="username" />
+                        <input asp-for="Username" placeholder="Nhập username" autocomplete="username" name="Username" />
                         <span asp-validation-for="Username" class="error"></span>
                     </div>
                 </div>
@@ -188,7 +188,7 @@
                 <div class="field">
                     <label asp-for="Password"></label>
                     <div class="input-row">
-                        <input asp-for="Password" placeholder="Nhập mật khẩu" type="password" autocomplete="current-password" />
+                        <input asp-for="Password" placeholder="Nhập mật khẩu" type="password" autocomplete="current-password" name="Password" />
                         <button type="button" class="show-pass">👁️</button>
                         <span asp-validation-for="Password" class="error"></span>
                     </div>
