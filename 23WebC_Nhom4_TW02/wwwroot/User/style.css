@@ -1121,3 +1121,23 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 .pagination > li > a, .pagination > li > span {
   color: #5a88ca;
 }
+/* --- Fix Product Gallery --- */
+.product-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* kho?ng cách gi?a ?nh */
+    margin-top: 10px;
+}
+
+    .product-gallery .gallery-item img {
+        width: 80px; /* kích th??c nh? g?n */
+        height: 80px;
+        object-fit: cover; /* crop cho v?a khung */
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        transition: transform 0.2s ease;
+    }
+
+        .product-gallery .gallery-item img:hover {
+            transform: scale(1.1); /* phóng to nh? khi hover */
+        }

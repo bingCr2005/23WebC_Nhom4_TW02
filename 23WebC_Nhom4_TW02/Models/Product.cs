@@ -1,6 +1,6 @@
 ﻿
 using Microsoft.Data.SqlClient;
-namespace _23WebC_Nhom4_TW02
+namespace _23WebC_Nhom4_TW02.Models
 {
     public class Product
     {
@@ -50,5 +50,10 @@ namespace _23WebC_Nhom4_TW02
         public bool IsNew { get; set; } = false;
 
         public int SalesCount { get; set; } = 0;
+        // Thêm Tag
+        public List<Tag> Tags { get; set; } = new List<Tag>();
+
+        // thêm danh sách ảnh
+        public List<ProductImage> Images { get; set; } = new List<ProductImage>(); 
     }
 }

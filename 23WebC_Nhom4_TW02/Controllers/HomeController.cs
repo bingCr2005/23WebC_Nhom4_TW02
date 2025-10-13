@@ -29,52 +29,52 @@ namespace _23WebC_Nhom4_TW02.Controllers
         }
 
         // Details: Load sản phẩm đơn lẻ theo ID, thêm vào Session RecentlyViewed
-        public IActionResult Details(int id)
-        {
-            var product = _productDao.GetProductById(id);
-            if (product == null)
-            {
-                return NotFound("Sản phẩm không tồn tại!");
-            }
+        //public IActionResult Details(int id)
+        //{
+        //    var product = _productDao.GetProductById(id);
+        //    if (product == null)
+        //    {
+        //        return NotFound("Sản phẩm không tồn tại!");
+        //    }
 
-            // Thêm vào Session RecentlyViewed (giới hạn 3)
-            AddToRecentlyViewedSession(id);
+        //    // Thêm vào Session RecentlyViewed (giới hạn 3)
+        //    AddToRecentlyViewedSession(id);
 
-            return View(product);  // Tạo Views/Home/Details.cshtml nếu cần
-        }
+        //    return View(product);  // Tạo Views/Home/Details.cshtml nếu cần
+        //}
 
         // Helper: Load RecentlyViewed từ Session
+
+        //Chỉ cần hàm lấy Recently Viewed từ session để hiển thị,
         private List<Product> GetRecentlyViewedFromSession()
         {
             var viewedIdsStr = HttpContext.Session.GetString("RecentlyViewed");
-            if (string.IsNullOrEmpty(viewedIdsStr))
-            {
-                return new List<Product>();
-            }
+            if (string.IsNullOrEmpty(viewedIdsStr)) return new List<Product>();
+
             var viewedIds = viewedIdsStr.Split(',').Select(int.Parse).ToList();
             return _productDao.GetRecentlyViewed(viewedIds);
         }
 
         // Helper: Thêm sản phẩm vào Session RecentlyViewed (thêm đầu, giới hạn 3)
-        private void AddToRecentlyViewedSession(int id)
-        {
-            var viewedIdsStr = HttpContext.Session.GetString("RecentlyViewed");
-            var viewedIds = string.IsNullOrEmpty(viewedIdsStr) ? new List<int>() : viewedIdsStr.Split(',').Select(int.Parse).ToList();
+        //private void AddToRecentlyViewedSession(int id)
+        //{
+        //    var viewedIdsStr = HttpContext.Session.GetString("RecentlyViewed");
+        //    var viewedIds = string.IsNullOrEmpty(viewedIdsStr) ? new List<int>() : viewedIdsStr.Split(',').Select(int.Parse).ToList();
 
-            // Xóa nếu đã tồn tại
-            viewedIds.Remove(id);
+        //    // Xóa nếu đã tồn tại
+        //    viewedIds.Remove(id);
 
-            // Thêm vào đầu
-            viewedIds.Insert(0, id);
+        //    // Thêm vào đầu
+        //    viewedIds.Insert(0, id);
 
-            // Giới hạn 3
-            if (viewedIds.Count > 3)
-            {
-                viewedIds = viewedIds.Take(3).ToList();
-            }
+        //    // Giới hạn 3
+        //    if (viewedIds.Count > 3)
+        //    {
+        //        viewedIds = viewedIds.Take(3).ToList();
+        //    }
 
-            HttpContext.Session.SetString("RecentlyViewed", string.Join(",", viewedIds));
-        }
+        //    HttpContext.Session.SetString("RecentlyViewed", string.Join(",", viewedIds));
+        //}
 
         public IActionResult Privacy()
         {
