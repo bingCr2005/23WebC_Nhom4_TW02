@@ -1,92 +1,61 @@
 @{
     ViewData["Title"] = "Thêm sản phẩm";
-    var cats = ViewBag.Categories as List<(int Id, string Name)>;
 }
-<br />
+
 <link rel="stylesheet" href="~/css/admin-product-create.css" />
+
 <div class="container-product">
     <h2>Thêm sản phẩm mới</h2>
 
     <form asp-action="Create" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+
+        <!-- Tên sản phẩm -->
         <div class="form-group">
             <label>Tên sản phẩm</label>
-            <input type="text" name="ProductName" required />
+            <input type="text" name="ProductName" required class="form-control" />
         </div>
 
-        <div class="row">
-            <div class="form-group">
-                <label>Danh mục</label>
-                <select name="CategoryID">
-                    <option value="">-- Chọn danh mục --</option>
-                    <option value="1">Điện thoại</option>
-                    <option value="2">Màn hình</option>
-                </select>
-            </div>
-            <!-- Popup thêm danh mục -->
-            <div id="addCategoryModal"
-                 style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
-            background:rgba(0,0,0,0.4); z-index:9999; justify-content:center; align-items:center;">
-                <div style="background:#fff; padding:20px; border-radius:10px; width:350px;">
-                    <h4>Thêm danh mục mới</h4>
-                    <div class="form-group">
-                        <label>Tên danh mục</label>
-                        <input id="newCategoryName" class="form-control" />
-                    </div>
-                    <div class="form-group">
-                        <label>Mô tả (tuỳ chọn)</label>
-                        <textarea id="newCategoryDescription" class="form-control"></textarea>
-                    </div>
-                    <div class="d-flex justify-content-end gap-2 mt-3">
-                        <button type="button" class="btn btn-secondary" onclick="closeAddCategory()">Hủy</button>
-                        <button type="button" class="btn btn-primary" onclick="addCategory()">Lưu</button>
-                    </div>
-                </div>
-            </div>
-            <script>
-                function showAddCategory() {
-                    document.getElementById('addCategoryModal').style.display = 'block';
-                }
-
-                function closeAddCategory() {
-                    document.getElementById('addCategoryModal').style.display = 'none';
-                }
-
-                async function addCategory() {
-                    const name = document.getElementById('newCategoryName').value.trim();
-                    if (!name) return alert("Vui lòng nhập tên danh mục!");
-
-                    const res = await fetch('/Admin/Category/AddAjax', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ TenDanhMuc: name })
-                    });
-
-                    if (res.ok) {
-                        alert("Đã thêm danh mục mới!");
-                        location.reload();
-                    } else {
-                        alert("Lỗi khi thêm danh mục!");
+        <!-- Danh mục -->
+        <div class="form-group">
+            <label>Danh mục</label>
+            <select name="CategoryId" class="form-select">
+                <option value="">-- Chọn danh mục --</option>
+                @if (ViewBag.Categories != null)
+                {
+                    foreach (var cat in ViewBag.Categories)
+                    {
+                        <option value="@cat.CategoryId">@cat.CategoryName</option>
                     }
                 }
-            </script>
-
-
-            <div class="form-group">
-                <label>Giá</label>
-                <input type="number" name="Price" />
-            </div>
-
-            <div class="form-group">
-                <label>Giá khuyến mãi</label>
-                <input type="number" name="PriceSale" />
-            </div>
+            </select>
         </div>
 
         <div class="form-group">
-            <label>Mô tả ngắn</label>
-            <textarea name="ShortDescription"></textarea>
+            <label>Hoặc nhập danh mục mới (nếu chưa có)</label>
+            <input type="text" name="NewCategoryName" class="form-control" placeholder="Tên danh mục mới" />
         </div>
 
+
+        <!-- Giá -->
+        <div class="form-group">
+            <label>Giá</label>
+            <input type="number" name="Price" class="form-control" />
+        </div>
+
+        <!-- Giá khuyến mãi -->
+        <div class="form-group">
+            <label>Giá khuyến mãi</label>
+            <input type="number" name="PriceSale" class="form-control" />
+        </div>
+
+        <!-- Mô tả ngắn -->
+        <div class="form-group">
+            <label>Mô tả ngắn</label>
+            <textarea name="ShortDescription" class="form-control"></textarea>
+        </div>
+
+        <!-- Ảnh -->
         <div class="form-group">
             <label>Ảnh sản phẩm</label>
             <div class="image-upload" id="upload-box">
@@ -96,12 +65,64 @@
             <div class="image-preview" id="preview"></div>
         </div>
 
+        <!-- Submit -->
         <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
         <a asp-action="Index" class="btn btn-secondary">Hủy</a>
     </form>
 </div>
 
+<!-- Popup thêm danh mục -->
+<div id="addCategoryModal"
+     style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+background:rgba(0,0,0,0.4); z-index:9999; display:flex; justify-content:center; align-items:center;">
+    <div style="background:#fff; padding:20px; border-radius:10px; width:350px;">
+        <h4>Thêm danh mục mới</h4>
+        <div class="form-group">
+            <label>Tên danh mục mới</label>
+            <input type="text" id="newCategoryName" class="form-control" placeholder="Tên danh mục mới (nếu có)" />
+        </div>
+        <div class="form-group">
+            <label>Mô tả (tuỳ chọn)</label>
+            <textarea id="newCategoryDescription" class="form-control"></textarea>
+        </div>
+        <div class="d-flex justify-content-end gap-2 mt-3">
+            <button type="button" class="btn btn-secondary" onclick="closeAddCategory()">Hủy</button>
+            <button type="button" class="btn btn-primary" onclick="addCategory()">Lưu</button>
+        </div>
+    </div>
+</div>
+
+<!-- Script -->
 <script>
+    // ====== Xử lý popup danh mục ======
+    function showAddCategory() {
+        document.getElementById('addCategoryModal').style.display = 'flex';
+    }
+
+    function closeAddCategory() {
+        document.getElementById('addCategoryModal').style.display = 'none';
+    }
+
+    function addCategory() {
+        const name = document.getElementById('newCategoryName').value.trim();
+        if (!name) {
+            alert("Vui lòng nhập tên danh mục mới!");
+            return;
+        }
+
+        // Thêm vào danh sách select
+        const select = document.querySelector("select[name='CategoryId']");
+        const option = document.createElement("option");
+        option.text = name;
+        option.value = "new:" + name; // đánh dấu là danh mục mới
+        option.selected = true;
+        select.add(option);
+
+        // Ẩn popup
+        closeAddCategory();
+    }
+
+    // ====== Xử lý ảnh preview ======
     const uploadBox = document.getElementById("upload-box");
     const input = document.getElementById("image-input");
     const preview = document.getElementById("preview");
@@ -112,9 +133,10 @@
         for (const file of input.files) {
             const img = document.createElement("img");
             img.src = URL.createObjectURL(file);
+            img.style.width = "100px";
+            img.style.margin = "5px";
+            img.style.borderRadius = "8px";
             preview.appendChild(img);
         }
     });
 </script>
-
-

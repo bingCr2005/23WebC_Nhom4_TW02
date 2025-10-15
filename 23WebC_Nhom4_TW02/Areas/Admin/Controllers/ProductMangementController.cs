@@ -30,7 +30,7 @@ namespace _23WebC_Nhom4_TW02.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            var categories = new List<(int Id, string Name)>();
+            var categories = new List<CategoryModel>();
             var connStr = _config.GetConnectionString("DefaultConnection");
             using (SqlConnection conn = new SqlConnection(connStr))
             {
@@ -40,11 +40,17 @@ namespace _23WebC_Nhom4_TW02.Areas.Admin.Controllers
                 {
                     while (rd.Read())
                     {
-                        categories.Add((Convert.ToInt32(rd["CategoryID"]), rd["CategoryName"].ToString()));
+                        categories.Add(new CategoryModel
+                        {
+                            CategoryId = Convert.ToInt32(rd["CategoryID"]),
+                            CategoryName = rd["CategoryName"].ToString()
+                        });
                     }
                 }
             }
             ViewBag.Categories = categories;
+
+
             return View();
         }
 
@@ -87,7 +93,7 @@ namespace _23WebC_Nhom4_TW02.Areas.Admin.Controllers
 
                 if (!string.IsNullOrWhiteSpace(newCategoryName))
                 {
-                    string insertCat = "INSERT INTO Category (CategoryName, Slug, Description, IsActive, CreatedAt) VALUES (@name, @slug, @desc, 1, GETDATE()); SELECT SCOPE_IDENTITY();";
+                    string insertCat = "INSERT INTO Categories  (CategoryName, Slug, Description, IsActive, CreatedAt) VALUES (@name, @slug, @desc, 1, GETDATE()); SELECT SCOPE_IDENTITY();";
                     using (var cmd = new SqlCommand(insertCat, conn))
                     {
                         cmd.Parameters.AddWithValue("@name", newCategoryName);
@@ -183,5 +189,11 @@ namespace _23WebC_Nhom4_TW02.Areas.Admin.Controllers
             TempData["Success"] = "Thêm sản phẩm thành công!";
             return RedirectToAction("Index");
         }
+        public class CategoryModel
+        {
+            public int CategoryId { get; set; }
+            public string CategoryName { get; set; }
+        }
+
     }
 }
