@@ -1,6 +1,44 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<_23WebC_Nhom4_TW02.Product>
 @{
-    <h1>Chào mừng đến với trang chủ quản trị</h1>
+    ViewData["Title"] = "Quản lý sản phẩm";
 }
+
+<div class="admin-container" style="display:flex; min-height:100vh;">
+    <!-- Sidebar -->
+    <div style="width:250px; background:#2c3e50; color:white; padding:20px;">
+        <h3>Admin Panel</h3>
+        <ul style="list-style:none; padding:0;">
+            <li><a href="/Admin/Home" style="color:white;">🏠 Trang chủ</a></li>
+            <li><a href="/Admin/ProductManagement/Create" style="color:white;">➕ Thêm sản phẩm</a></li>
+            <li><a href="/AdminLogout" style="color:white;">🚪 Đăng xuất</a></li>
+        </ul>
+    </div>
+
+    <!-- Main content -->
+    <div style="flex:1; padding:30px;">
+        <h2>Danh sách sản phẩm</h2>
+        <table border="1" cellpadding="10" style="border-collapse:collapse; width:100%;">
+            <thead style="background:#34495e; color:white;">
+                <tr>
+                    <th>ID</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Tồn kho</th>
+                    <th>Trạng thái</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.ProductID</td>
+                        <td>@item.ProductName</td>
+                        <td>@item.Price</td>
+                        <td>@item.Stock</td>
+                        <td>@item.Status</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,9 +1,5 @@
-using _23WebC_Nhom4_TW02.Models;
-using Microsoft.Extensions.DependencyInjection;
-﻿using static _23WebC_Nhom4_TW02.PostDAO;
 ﻿using static _23WebC_Nhom4_TW02.PostDAO;
 using _23WebC_Nhom4_TW02.Models;
-
 namespace _23WebC_Nhom4_TW02
 {
     public class Program
@@ -17,25 +13,16 @@ namespace _23WebC_Nhom4_TW02
 
             builder.Services.AddControllersWithViews();
 
-            // builder.Services.AddSingleton<IDataProvider, DataProvider>();
+            builder.Services.AddScoped<IDataProvider, DataProvider>();
 
-            builder.Services.AddDistributedMemoryCache(); // lưu session tạm trong bộ nhớ
-            builder.Services.AddSession(options =>
-            {
-                options.IdleTimeout = TimeSpan.FromMinutes(30); // thời gian sống của session
-                options.Cookie.HttpOnly = true;
-                options.Cookie.IsEssential = true;
-            });
-
-            // dùng DI cho ProductDao và DataProvider
-            builder.Services.AddScoped<IDataProvider, DataProvider>();  
-            builder.Services.AddScoped<IProductDao, ProductDao>(); 
+            builder.Services.AddSession();
 
             // DI người dùng
             builder.Services.AddScoped<IUserDao, UserDao>();
 
             // DI danh mục sản phẩm
             builder.Services.AddScoped<ICategoryDao, CategoryDao>();
+
 
             // DI tag sản phẩm
             builder.Services.AddScoped<ITagDao, TagDao>();
@@ -70,27 +57,26 @@ namespace _23WebC_Nhom4_TW02
             // DI bài viết
             builder.Services.AddScoped<IPostDao, PostDao>();
 
-            //sửa ngày 11/10 DI singleton->scoped
-            //builder.Services.AddScoped<ICouponDao, CouponDao>();
-            //builder.Services.AddScoped<IWebSettingDao, WebSettingDao>();
             // DI mã giảm giá
-
-            //builder.Services.AddSingleton<ICouponDao, CouponDao>();
-
-            // DI website
-            //builder.Services.AddSingleton<IWebSettingDao, WebSettingDao>();
-
             builder.Services.AddScoped<ICouponDao, CouponDao>();
 
             // DI website
             builder.Services.AddScoped<IWebSettingDao, WebSettingDao>();
+     
+            //  Cấu hình Session
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
@@ -98,18 +84,22 @@ namespace _23WebC_Nhom4_TW02
             app.UseStaticFiles();
 
             app.UseRouting();
-            //bật session
-            app.UseSession();
+
+            app.UseSession(); // ✅ bắt buộc để dùng HttpContext.Session
 
             app.UseAuthorization();
 
+            DTProvider.ConnectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+            // ✅ ROUTE cho Area (phải đặt trước default)
+            app.MapControllerRoute(
+                name: "areas",
+                pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
+            // ✅ ROUTE mặc định (cho người dùng)
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
-
-            app.MapControllerRoute(
-                name: "Areas",
-                pattern: "{Area:exists}/{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
         }
