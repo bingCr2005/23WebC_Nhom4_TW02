@@ -1,0 +1,285 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|c:\\users\\admin\\downloads\\23webc_nhom4_tw02\\areas\\admin\\views\\productmanagement\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|solutionrelative:areas\\admin\\views\\productmanagement\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|c:\\users\\admin\\downloads\\23webc_nhom4_tw02\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|solutionrelative:controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|c:\\users\\admin\\downloads\\23webc_nhom4_tw02\\controllers\\cartitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|solutionrelative:controllers\\cartitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|c:\\users\\admin\\downloads\\23webc_nhom4_tw02\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|c:\\users\\admin\\downloads\\23webc_nhom4_tw02\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|solutionrelative:controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|c:\\users\\admin\\downloads\\23webc_nhom4_tw02\\models\\cartitemdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|solutionrelative:models\\cartitemdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|c:\\users\\admin\\downloads\\23webc_nhom4_tw02\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|c:\\users\\admin\\downloads\\23webc_nhom4_tw02\\models\\categorydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|solutionrelative:models\\categorydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|c:\\users\\admin\\downloads\\23webc_nhom4_tw02\\models\\icategorydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|solutionrelative:models\\icategorydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|c:\\users\\admin\\downloads\\23webc_nhom4_tw02\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|solutionrelative:models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|c:\\users\\admin\\downloads\\23webc_nhom4_tw02\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|c:\\users\\admin\\downloads\\23webc_nhom4_tw02\\models\\coupon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|solutionrelative:models\\coupon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|c:\\users\\admin\\downloads\\23webc_nhom4_tw02\\wwwroot\\css\\admin-product-create.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|solutionrelative:wwwroot\\css\\admin-product-create.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|c:\\users\\admin\\downloads\\23webc_nhom4_tw02\\areas\\admin\\controllers\\productmangementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|solutionrelative:areas\\admin\\controllers\\productmangementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|c:\\users\\admin\\downloads\\23webc_nhom4_tw02\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|c:\\users\\admin\\downloads\\23webc_nhom4_tw02\\areas\\admin\\views\\adminlogin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9578F8D2-CF00-9715-EEB4-485B74AE6E6D}|23WebC_Nhom4_TW02.csproj|solutionrelative:areas\\admin\\views\\adminlogin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T03:31:54.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ContactController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Controllers\\ContactController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ContactController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Controllers\\ContactController.cs",
+              "RelativeToolTip": "Controllers\\ContactController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T03:31:11.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Coupon.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Models\\Coupon.cs",
+              "RelativeDocumentMoniker": "Models\\Coupon.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Models\\Coupon.cs",
+              "RelativeToolTip": "Models\\Coupon.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T02:56:38.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CartItemDAO.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Models\\CartItemDAO.cs",
+              "RelativeDocumentMoniker": "Models\\CartItemDAO.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Models\\CartItemDAO.cs",
+              "RelativeToolTip": "Models\\CartItemDAO.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T02:53:22.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAACEAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T02:26:16.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Models\\Category.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Models\\Category.cs",
+              "RelativeToolTip": "Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T02:42:54.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CategoryDAO.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Models\\CategoryDAO.cs",
+              "RelativeDocumentMoniker": "Models\\CategoryDAO.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Models\\CategoryDAO.cs",
+              "RelativeToolTip": "Models\\CategoryDAO.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAwwH4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T02:42:39.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ICategoryDao.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Models\\ICategoryDao.cs",
+              "RelativeDocumentMoniker": "Models\\ICategoryDao.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Models\\ICategoryDao.cs",
+              "RelativeToolTip": "Models\\ICategoryDao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T02:41:52.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T02:38:44.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Areas\\Admin\\Views\\ProductManagement\\Create.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\ProductManagement\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Areas\\Admin\\Views\\ProductManagement\\Create.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\ProductManagement\\Create.cshtml",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAAFUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T02:23:03.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CartItemController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Controllers\\CartItemController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CartItemController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Controllers\\CartItemController.cs",
+              "RelativeToolTip": "Controllers\\CartItemController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T03:32:01.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "admin-product-create.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\wwwroot\\css\\admin-product-create.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\admin-product-create.css",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\wwwroot\\css\\admin-product-create.css",
+              "RelativeToolTip": "wwwroot\\css\\admin-product-create.css",
+              "ViewState": "AgIAAG4AAAAAAAAAAADwv4gAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-13T02:30:06.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProductMangementController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Areas\\Admin\\Controllers\\ProductMangementController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ProductMangementController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Areas\\Admin\\Controllers\\ProductMangementController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\ProductMangementController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAACYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T02:26:19.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Models\\CartItem.cs",
+              "RelativeDocumentMoniker": "Models\\CartItem.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Models\\CartItem.cs",
+              "RelativeToolTip": "Models\\CartItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T03:02:03.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-13T02:23:25.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Areas\\Admin\\Views\\AdminLogin\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\AdminLogin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\23WebC_Nhom4_TW02\\Areas\\Admin\\Views\\AdminLogin\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\AdminLogin\\Index.cshtml",
+              "ViewState": "AgIAALAAAAAAAAAAAAAgwL4AAACMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T02:21:49.685Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
